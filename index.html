@@ -404,25 +404,31 @@ Bons produtos não precisam ser os mais caros. Aqui você encontra opções equi
 <!-- ================= SCRIPT ROTATIVO ================= -->
 
 <script>
+document.addEventListener("DOMContentLoaded", () => {
 
-const frases = document.querySelectorAll(".frase");
+    const frases = document.querySelectorAll(".frase");
 
-let atual = 0;
+    if (!frases || frases.length === 0) return;
 
-setInterval(() => {
+    let atual = 0;
 
-frases[atual].classList.remove("ativa");
+    // garante estado inicial correto (evita sumir tudo)
+    frases.forEach((f, i) => {
+        f.classList.remove("ativa");
+        if (i === 0) f.classList.add("ativa");
+    });
 
-atual++;
+    setInterval(() => {
 
-if (atual >= frases.length) {
-atual = 0;
-}
+        frases[atual].classList.remove("ativa");
 
-frases[atual].classList.add("ativa");
+        atual = (atual + 1) % frases.length;
 
-}, 3500);
+        frases[atual].classList.add("ativa");
 
+    }, 3500);
+
+});
 </script>
 
 </body>
