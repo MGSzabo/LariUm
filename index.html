@@ -410,79 +410,90 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!frases.length) return;
 
-    const velocidadeDigitar = 45;
-    const velocidadeApagar = 25;
-    const pausa = 1800;
+    // Tempo de cada letra
+    const velocidadeLetra = 70;
 
-    const conteudoOriginal = [];
+    // Tempo entre cada bloco (azul -> verde -> azul)
+    const pausaEntreBlocos = 350;
 
-    frases.forEach(frase => {
+    // Tempo da frase completa visível
+    const pausaFinal = 1800;
 
-        conteudoOriginal.push(frase.innerHTML);
+    // Tempo antes da próxima frase
+    const pausaTroca = 400;
+
+    frases.forEach((frase, i) => {
 
         frase.dataset.original = frase.innerHTML;
-
         frase.innerHTML = "";
-
         frase.classList.remove("ativa");
+
+        if(i === 0){
+            frase.classList.add("ativa");
+        }
 
     });
 
     let atual = 0;
 
-    frases[0].classList.add("ativa");
+    function esperar(ms){
+        return new Promise(r => setTimeout(r, ms));
+    }
 
-    async function escrever(elemento, html){
+    async function escreverSpan(span, texto){
 
-        elemento.innerHTML = "";
+        for(const letra of texto){
 
-        let resultado = "";
+            span.textContent += letra;
 
-        let dentroTag = false;
-
-        for(let i=0;i<html.length;i++){
-
-            const c = html[i];
-
-            resultado += c;
-
-            if(c === "<") dentroTag = true;
-
-            if(c === ">"){
-                dentroTag = false;
-                elemento.innerHTML = resultado;
-                continue;
-            }
-
-            if(!dentroTag){
-
-                elemento.innerHTML = resultado;
-
-                await new Promise(r=>setTimeout(r,velocidadeDigitar));
-
-            }
+            await esperar(velocidadeLetra);
 
         }
 
     }
 
-    async function apagar(elemento){
+    async function escreverFrase(frase){
 
-        let html = elemento.innerHTML;
+        frase.innerHTML = "";
 
-        while(html.length){
+        const temp = document.createElement("div");
+        temp.innerHTML = frase.dataset.original;
 
-            html = html.slice(0,-1);
+        const spans = temp.querySelectorAll("span");
 
-            elemento.innerHTML = html;
+        for(const original of spans){
 
-            await new Promise(r=>setTimeout(r,velocidadeApagar));
+            const novo = document.createElement("span");
+
+            novo.className = original.className;
+
+            frase.appendChild(novo);
+
+            await escreverSpan(novo, original.textContent);
+
+            await esperar(pausaEntreBlocos);
+
+            frase.appendChild(document.createTextNode(" "));
 
         }
 
     }
 
-    async function animar(){
+    async function apagarFrase(frase){
+
+        frase.style.transition = "opacity .8s ease";
+
+        frase.style.opacity = "0";
+
+        await esperar(800);
+
+        frase.innerHTML = "";
+
+        frase.style.opacity = "1";
+
+    }
+
+    async function loop(){
 
         while(true){
 
@@ -490,24 +501,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
             frase.classList.add("ativa");
 
-            await escrever(frase,conteudoOriginal[atual]);
+            await escreverFrase(frase);
 
-            await new Promise(r=>setTimeout(r,pausa));
+            await esperar(pausaFinal);
 
-            await apagar(frase);
+            await apagarFrase(frase);
 
             frase.classList.remove("ativa");
 
             atual = (atual + 1) % frases.length;
 
+            frases[atual].classList.add("ativa");
+
+            await esperar(pausaTroca);
+
         }
 
     }
 
-    animar();
+    loop();
 
 });
 </script>
-
 </body>
 </html>
