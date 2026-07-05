@@ -259,45 +259,26 @@ nav a:hover::after{
 
 /* ================= TEXTO ROTATIVO ================= */
 
-.texto-rotativo{
-
-    position:relative;
-
-    min-height:95px;
-
-    margin-bottom:45px;
-
+.texto-rotativo {
+  position: relative;
+  height: 70px; /* ESSENCIAL */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.frase{
-
-    position:absolute;
-
-    width:100%;
-
-    left:0;
-    top:0;
-
-    opacity:0;
-
-    transform:translateY(18px);
-
-    transition:.8s;
-
-    font-size:27px;
-
-    font-weight:700;
-
-    line-height:1.6;
-
+.frase {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.4s ease;
+  text-align: center;
 }
 
-.frase.ativa{
-
-    opacity:1;
-
-    transform:translateY(0);
-
+.frase.ativa {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .azul{
@@ -362,28 +343,40 @@ nav a:hover::after{
 
 }
 
-.btn-principal:hover{
-
-    transform:translateY(-4px);
-
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: 0.25s ease;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
-.btn-secundario{
-
-    background:#fff;
-
-    color:var(--azul);
-
-    border:2px solid var(--azul);
-
+.btn-principal {
+  background: linear-gradient(135deg, #2fb4ff, #22c55e);
+  color: white;
+  border: none;
 }
 
-.btn-secundario:hover{
+.btn-principal:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
 
-    background:var(--azul);
+.btn-secundario {
+  background: transparent;
+  border: 2px solid #2fb4ff;
+  color: #2fb4ff;
+}
 
-    color:#fff;
-
+.btn-secundario:hover {
+  background: #2fb4ff;
+  color: white;
 }
 
 /* ================= SEÇÕES ================= */
