@@ -47,8 +47,15 @@
   </symbol>
 
   <!-- LIMPEZA (ASPIRADOR SIMBÓLICO) -->
-  <symbol id="limpeza" viewBox="0 0 256 256">
-</symbol>
+  <symbol id="limpeza" viewBox="0 0 24 24">
+    <path d="M3 21h18"
+          stroke="currentColor"
+          stroke-width="2"/>
+    <path d="M7 21V7l5-4 5 4v14"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"/>
+  </symbol>
 
   <!-- CONFORTO -->
   <symbol id="conforto" viewBox="0 0 24 24">
