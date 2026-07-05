@@ -186,17 +186,23 @@ nav a:hover::after{
     overflow:hidden;
 }
 
-.frase{
-    position:absolute;
-    opacity:0;
-    transform:translateY(10px);
-    transition:0.4s ease;
-    text-align:center;
+.frase {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.4s ease;
+  text-align: center;
 }
 
-.frase.ativa{
-    opacity:1;
-    transform:translateY(0);
+/* GARANTIA DE FALLBACK VISÍVEL */
+.frase:first-child {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.frase.ativa {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .azul{ color:var(--azul); }
