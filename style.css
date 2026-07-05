@@ -98,8 +98,8 @@ section{
 
 .logo img{
 
-    width:66px;
-    height:66px;
+    width:90px;
+    height:90px;
 
     object-fit:contain;
 
@@ -217,26 +217,22 @@ nav a:hover::after{
 }
 
 .hero-content{
-
     position:relative;
-
     z-index:2;
-
     width:min(900px,92%);
-
-    padding-top:120px;
+    padding-top:90px;
 
     display:flex;
-
     flex-direction:column;
+    align-items:flex-start;
 
-    align-items:center;
-
+    text-align:left;
+    margin-left:6%;
 }
 
 .hero-logo{
 
-    width:240px;
+    width:260px;
 
     margin:auto;
 
