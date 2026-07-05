@@ -408,25 +408,103 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const frases = document.querySelectorAll(".frase");
 
-    if (!frases || frases.length === 0) return;
+    if (!frases.length) return;
+
+    const velocidadeDigitar = 45;
+    const velocidadeApagar = 25;
+    const pausa = 1800;
+
+    const conteudoOriginal = [];
+
+    frases.forEach(frase => {
+
+        conteudoOriginal.push(frase.innerHTML);
+
+        frase.dataset.original = frase.innerHTML;
+
+        frase.innerHTML = "";
+
+        frase.classList.remove("ativa");
+
+    });
 
     let atual = 0;
 
-    // garante estado inicial correto (evita sumir tudo)
-    frases.forEach((f, i) => {
-        f.classList.remove("ativa");
-        if (i === 0) f.classList.add("ativa");
-    });
+    frases[0].classList.add("ativa");
 
-    setInterval(() => {
+    async function escrever(elemento, html){
 
-        frases[atual].classList.remove("ativa");
+        elemento.innerHTML = "";
 
-        atual = (atual + 1) % frases.length;
+        let resultado = "";
 
-        frases[atual].classList.add("ativa");
+        let dentroTag = false;
 
-    }, 3500);
+        for(let i=0;i<html.length;i++){
+
+            const c = html[i];
+
+            resultado += c;
+
+            if(c === "<") dentroTag = true;
+
+            if(c === ">"){
+                dentroTag = false;
+                elemento.innerHTML = resultado;
+                continue;
+            }
+
+            if(!dentroTag){
+
+                elemento.innerHTML = resultado;
+
+                await new Promise(r=>setTimeout(r,velocidadeDigitar));
+
+            }
+
+        }
+
+    }
+
+    async function apagar(elemento){
+
+        let html = elemento.innerHTML;
+
+        while(html.length){
+
+            html = html.slice(0,-1);
+
+            elemento.innerHTML = html;
+
+            await new Promise(r=>setTimeout(r,velocidadeApagar));
+
+        }
+
+    }
+
+    async function animar(){
+
+        while(true){
+
+            const frase = frases[atual];
+
+            frase.classList.add("ativa");
+
+            await escrever(frase,conteudoOriginal[atual]);
+
+            await new Promise(r=>setTimeout(r,pausa));
+
+            await apagar(frase);
+
+            frase.classList.remove("ativa");
+
+            atual = (atual + 1) % frases.length;
+
+        }
+
+    }
+
+    animar();
 
 });
 </script>
