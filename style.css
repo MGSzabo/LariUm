@@ -1219,5 +1219,9 @@ footer{
         gap:10px;
 
     }
-
+   
+*{
+    outline:1px solid red;
+}
+   
 }
