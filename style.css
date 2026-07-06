@@ -1010,24 +1010,38 @@ footer{
 
     .header{
 
-        flex-direction:column;
+    display:flex;
 
-        justify-content:center;
+    flex-direction:row;
 
-        height:auto;
+    justify-content:space-between;
 
-        padding:18px;
+    align-items:flex-start;
 
-        gap:18px;
+    padding:16px;
 
-    }
+    gap:12px;
+
+}
+
+   .header-direita{
+
+    flex:0;
+
+    width:auto;
+
+    align-items:flex-end;
+
+}
+   
 
     .logo{
 
-        justify-content:center;
+    justify-content:flex-start;
 
-    }
+    flex:1;
 
+}
     .logo img{
 
         width:100%;
@@ -1040,15 +1054,11 @@ footer{
 
     nav{
 
-        width:100%;
+    width:auto;
 
-        justify-content:center;
+    align-items:flex-end;
 
-        flex-wrap:wrap;
-
-        gap:10px;
-
-    }
+}
 
     nav a{
 
