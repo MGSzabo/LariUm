@@ -86,8 +86,12 @@ section{
     padding:10px 7%;
 
     display:flex;
+   
     justify-content:space-between;
+   
     align-items:center;
+
+    min-height:140px;
 
     background:rgba(45,187,99,.18);
 
@@ -154,31 +158,23 @@ section{
 /* ================= LOGO ================= */
 
 .logo{
-
     position:absolute;
-
-    top:0;
-    bottom:0;
     left:50%;
-
-    transform:translateX(-50%);
+    top:50%;
+    transform:translate(-50%, -50%);
+    z-index:1;
 
     display:flex;
     justify-content:center;
     align-items:center;
 
-    width:500px;
-
-    z-index:1;
-
     pointer-events:none;
-
 }
 
 .logo img{
 
-    width:auto;
-    height:100%;
+    width:160px;
+    height:140px;
 
     object-fit:contain;
 
