@@ -239,7 +239,7 @@ nav a:hover::after{
 
     align-items:flex-start;
 
-    overflow:hidden;
+    overflow:clip;
 
 }
 
