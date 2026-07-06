@@ -1,0 +1,1127 @@
+/* =====================================================
+STYLE.CSS - LARIUM
+===================================================== */
+
+/* =====================================================
+==> CONFIGURAÇÕES GERAIS (TODOS OS DISPOSITIVOS)
+Esta parte vale para Desktop, Notebook, Tablet e Mobile.
+===================================================== */
+
+/* ================= RESET ================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f5f8fb;
+color:#243443;
+overflow-x:hidden;
+line-height:1.6;
+}
+
+/* ================= VARIÁVEIS ================= */
+
+:root{
+
+--azul:#1788d6;  
+--azulEscuro:#1168a5;  
+
+--verde:#2dbb63;  
+--verdeEscuro:#219653;  
+
+--texto:#243443;  
+--textoClaro:#6b7a89;  
+
+--branco:#ffffff;  
+--cinza:#eef3f7;  
+
+--sombra:0 12px 35px rgba(0,0,0,.08);  
+
+--borda:18px;
+
+}
+
+/* ================= CONFIGURAÇÕES GERAIS ================= */
+
+img{
+max-width:100%;
+display:block;
+}
+
+a{
+text-decoration:none;
+}
+
+section{
+scroll-margin-top:90px;
+}
+
+/* =====================================================
+==> HEADER
+===================================================== */
+
+.header{
+
+position:relative;  
+
+top:0;  
+left:0;  
+
+width:100%;  
+min-height:95px;  
+
+padding:10px 7%;  
+
+display:flex;  
+ 
+justify-content:space-between;  
+ 
+align-items:center;  
+
+min-height:140px;  
+
+background:rgba(45,187,99,.18);  
+
+backdrop-filter:blur(14px);  
+
+box-shadow:0 4px 18px rgba(0,0,0,.08);  
+
+transition:.35s;  
+
+z-index:9999;
+
+}
+
+.header{
+align-items:stretch;
+}
+
+/* ================= COLUNA DIREITA ================= */
+
+.header-direita{
+
+position:relative;  
+ 
+z-index:2;  
+ 
+display:flex;  
+
+flex:1;  
+
+justify-content:flex-end;  
+
+align-items:flex-start;  
+
+margin-left:auto;
+
+}
+
+/* ================= MENU AUXILIAR ================= */
+
+.menu{
+
+display:flex;  
+
+flex-direction:column;  
+
+align-items:flex-end;  
+
+gap:4px;
+
+}
+
+.menu a{
+
+font-size:18px;  
+
+font-weight:600;  
+
+flex-shrink:0;
+
+}
+
+/* ================= LOGO ================= */
+
+.logo{
+position:absolute;
+left:50%;
+top:50%;
+transform:translate(-50%, -50%);
+z-index:1;
+
+display:flex;  
+justify-content:center;  
+align-items:center;  
+
+pointer-events:none;
+
+}
+
+.logo img{
+
+width:160px;  
+height:140px;  
+
+object-fit:contain;  
+
+pointer-events:none;
+
+}
+
+.logo img:hover{
+
+transform:scale(1.05);
+
+}
+
+/* ================= MENU PRINCIPAL ================= */
+
+nav{
+
+position:relative;  
+ 
+z-index:2;  
+
+display:flex;  
+
+flex-direction:column;  
+
+align-items:flex-end;  
+
+gap:12px;
+
+}
+
+nav a{
+
+color:var(--azul);  
+
+font-size:15px;  
+
+font-weight:700;  
+
+letter-spacing:.2px;  
+
+padding:6px 14px;  
+
+border-radius:999px;  
+
+position:relative;  
+
+transition:.35s;  
+
+text-shadow:0 1px 2px rgba(0,0,0,.18);
+
+}
+
+nav a::after{
+
+content:"";  
+
+position:absolute;  
+
+left:16px;  
+right:16px;  
+bottom:7px;  
+
+height:2px;  
+
+background:linear-gradient(  
+    90deg,  
+    var(--azul),  
+    var(--verde)  
+);  
+
+transform:scaleX(0);  
+
+transform-origin:center;  
+
+transition:.35s;
+
+}
+
+nav a:hover{
+
+background:rgba(255,255,255,.16);  
+
+color:#fff;
+
+}
+
+nav a:hover::after{
+
+transform:scaleX(1);
+
+}
+
+/* =====================================================
+==> HERO
+===================================================== */
+
+.hero{
+
+position:relative;  
+
+min-height:65vh;  
+
+display:flex;  
+
+justify-content:flex-start;  
+
+align-items:flex-start;  
+
+overflow:hidden;
+
+}
+
+.hero picture{
+
+position:absolute;  
+
+inset:0;  
+
+width:100%;  
+height:100%;
+
+}
+
+.hero-bg{
+
+width:100%;  
+height:100%;  
+
+object-fit:cover;  
+
+object-position:center;
+
+}
+
+.hero-overlay{
+
+position:absolute;  
+
+inset:0;  
+
+background:linear-gradient(  
+    rgba(255,255,255,.56),  
+    rgba(255,255,255,.78)  
+);
+
+}
+
+/* =====================================================
+==> CONTEÚDO DO HERO
+===================================================== */
+
+.hero-content{
+
+position:relative;  
+
+z-index:2;  
+
+width:min(760px,92%);  
+
+margin-left:7%;  
+
+padding-top:20px;  
+
+display:flex;  
+
+flex-direction:column;  
+
+justify-content:flex-start;  
+
+align-items:flex-start;  
+
+text-align:left;
+
+}
+
+.hero-logo{
+
+display:none;
+
+}
+
+.slogan{
+
+font-size:45px;  
+
+line-height:1.35;  
+
+font-weight:800;  
+
+color:#263746;  
+
+margin-bottom:28px;  
+
+max-width:620px;
+
+}
+
+/* =====================================================
+TEXTO ROTATIVO
+===================================================== */
+
+.texto-rotativo{
+position:relative;
+width:100%;
+min-height:90px;
+margin-bottom:42px;
+}
+
+.frase{
+position:absolute;
+width:100%;
+left:0;
+top:0;
+
+opacity:0;  
+transform:translateY(18px);  
+
+transition:opacity .8s ease, transform .8s ease;  
+
+font-size:35px;  
+font-weight:700;  
+line-height:1.7;  
+
+pointer-events:none;
+
+}
+
+.frase.ativa{
+opacity:1;
+transform:translateY(0);
+}
+
+.azul{
+color:var(--azul);
+}
+
+.verde{
+color:var(--verde);
+}
+
+/* =====================================================
+--> SEÇÕES GERAIS (Desktop + Mobile) <--
+===================================================== */
+
+.secao{
+
+width:min(1250px,92%);  
+margin:auto;  
+padding:95px 0;
+
+}
+
+.secao h2{
+
+font-size:42px;  
+text-align:center;  
+color:#22384a;  
+font-weight:800;  
+margin-bottom:18px;  
+letter-spacing:.3px;
+
+}
+
+.subtitulo{
+
+max-width:760px;  
+margin:auto auto 55px;  
+text-align:center;  
+color:var(--textoClaro);  
+font-size:20px;  
+line-height:1.7;
+
+}
+
+/* =====================================================
+--> CATEGORIAS (Desktop + Mobile) <--
+===================================================== */
+
+.categorias-grid{
+
+display:grid;  
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));  
+gap:32px;
+
+}
+
+.categoria-card{
+
+background:#ffffff;  
+border-radius:24px;  
+padding:38px 30px;  
+text-align:center;  
+box-shadow:0 14px 40px rgba(0,0,0,.08);  
+border:1px solid rgba(23,136,214,.08);  
+
+display:flex;  
+flex-direction:column;  
+align-items:center;  
+
+transition:.35s;
+
+}
+
+.categoria-card:hover{
+
+transform:translateY(-8px);  
+box-shadow:0 20px 48px rgba(0,0,0,.12);
+
+}
+
+.categoria-icone{
+
+width:82px;  
+height:82px;  
+border-radius:22px;  
+
+display:flex;  
+justify-content:center;  
+align-items:center;  
+
+margin-bottom:24px;  
+
+background:linear-gradient(  
+    135deg,  
+    rgba(23,136,214,.10),  
+    rgba(45,187,99,.10)  
+);
+
+}
+
+.categoria-icone img{
+
+width:60px;  
+height:60px;  
+object-fit:contain;
+
+}
+
+.categoria-card h3{
+
+font-size:27px;  
+color:var(--azul);  
+margin-bottom:14px;  
+font-weight:800;
+
+}
+
+.categoria-card p{
+
+color:var(--textoClaro);  
+font-size:17px;  
+line-height:1.8;
+
+}
+
+/* =====================================================
+--> PRODUTOS (Desktop + Mobile) <--
+===================================================== */
+
+.produtos-grid{
+
+display:grid;  
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));  
+gap:32px;
+
+}
+
+.produto{
+
+display:flex;  
+flex-direction:column;  
+
+overflow:hidden;  
+
+background:#fff;  
+border-radius:22px;  
+border:1px solid rgba(0,0,0,.05);  
+
+box-shadow:0 14px 40px rgba(0,0,0,.08);  
+
+transition:.35s;
+
+}
+
+.produto:hover{
+
+transform:translateY(-8px);  
+box-shadow:0 22px 50px rgba(0,0,0,.12);
+
+}
+
+.produto-img{
+
+height:240px;  
+
+display:flex;  
+justify-content:center;  
+align-items:center;  
+
+background:linear-gradient(  
+    135deg,  
+    #d8edf9,  
+    #eef9f2  
+);
+
+}
+
+.produto-img::before{
+
+content:"Imagem do Produto";  
+color:#6f7f8d;  
+font-size:15px;
+
+}
+
+.produto h3{
+
+margin:24px 22px 12px;  
+font-size:24px;  
+color:#243443;  
+font-weight:800;
+
+}
+
+.produto p{
+
+margin:0 22px 26px;  
+color:var(--textoClaro);  
+line-height:1.7;  
+flex:1;
+
+}
+
+.produto button{
+
+margin:0 22px 24px;  
+padding:16px;  
+
+border:none;  
+border-radius:999px;  
+
+cursor:pointer;  
+
+color:#fff;  
+font-size:15px;  
+font-weight:700;  
+
+background:linear-gradient(  
+    135deg,  
+    var(--azul),  
+    var(--verde)  
+);  
+
+transition:.35s;
+
+}
+
+.produto button:hover{
+
+transform:translateY(-3px);
+
+}
+
+/* =====================================================
+--> DESTAQUE (Desktop + Mobile) <--
+===================================================== */
+
+.destaque{
+
+background:linear-gradient(  
+    135deg,  
+    rgba(23,136,214,.07),  
+    rgba(45,187,99,.08)  
+);  
+
+border-radius:34px;  
+padding:70px 45px;
+
+}
+
+/* =====================================================
+--> COMO FUNCIONA (Desktop + Mobile) <--
+===================================================== */
+
+.passos{
+
+display:grid;  
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));  
+gap:32px;
+
+}
+
+.passo{
+
+background:#fff;  
+padding:42px 34px;  
+
+border-radius:24px;  
+
+text-align:center;  
+
+border:1px solid rgba(0,0,0,.05);  
+
+box-shadow:0 14px 40px rgba(0,0,0,.08);  
+
+transition:.35s;
+
+}
+
+.passo:hover{
+
+transform:translateY(-8px);  
+
+box-shadow:0 22px 50px rgba(0,0,0,.12);
+
+}
+
+.passo span{
+
+width:70px;  
+height:70px;  
+
+margin:auto auto 24px;  
+
+display:flex;  
+justify-content:center;  
+align-items:center;  
+
+border-radius:50%;  
+
+font-size:30px;  
+font-weight:800;  
+
+color:#fff;  
+
+background:linear-gradient(  
+    135deg,  
+    var(--azul),  
+    var(--verde)  
+);
+
+}
+
+.passo h3{
+
+font-size:29px;  
+color:var(--azul);  
+
+margin-bottom:16px;  
+
+font-weight:800;
+
+}
+
+.passo p{
+
+color:var(--textoClaro);  
+
+line-height:1.8;  
+
+font-size:17px;
+
+}
+
+/* =====================================================
+--> MASCOTE (Desktop + Mobile) <--
+===================================================== */
+
+.mascote{
+
+width:min(960px,92%);  
+
+margin:90px auto;  
+
+padding:70px 40px;  
+
+background:#fff;  
+
+border-radius:32px;  
+
+box-shadow:0 18px 48px rgba(0,0,0,.08);  
+
+text-align:center;
+
+}
+
+.mascote img{
+
+width:185px;  
+
+margin:0 auto 28px;  
+
+transition:.35s;
+
+}
+
+.mascote img:hover{
+
+transform:translateY(-6px);
+
+}
+
+.mascote h2{
+
+font-size:38px;  
+
+color:var(--azul);  
+
+margin-bottom:18px;  
+
+font-weight:800;
+
+}
+
+.mascote p{
+
+max-width:670px;  
+
+margin:auto;  
+
+color:var(--textoClaro);  
+
+font-size:18px;  
+
+line-height:1.8;
+
+}
+
+/* =====================================================
+--> FOOTER (Desktop + Mobile) <--
+===================================================== */
+
+footer{
+
+margin-top:100px;  
+
+background:linear-gradient(  
+    135deg,  
+    rgba(23,136,214,.08),  
+    rgba(45,187,99,.10)  
+);  
+
+border-top:1px solid rgba(0,0,0,.06);  
+
+text-align:center;  
+
+padding:70px 25px 50px;
+
+}
+
+.footer-logo{
+
+display:flex;  
+
+justify-content:center;  
+
+margin-bottom:28px;
+
+}
+
+.footer-logo-img{
+
+width:150px;  
+
+object-fit:contain;
+
+}
+
+.footer-links{
+
+display:flex;  
+
+justify-content:center;  
+align-items:center;  
+
+flex-wrap:wrap;  
+
+gap:18px;  
+
+margin:30px 0;
+
+}
+
+.footer-links a{
+
+color:var(--azul);  
+
+font-weight:700;  
+
+padding:10px 18px;  
+
+border-radius:999px;  
+
+transition:.35s;
+
+}
+
+.footer-links a:hover{
+
+background:rgba(23,136,214,.10);  
+
+color:var(--verde);
+
+}
+
+.copyright{
+
+margin-top:20px;  
+
+color:#6f7f8d;  
+
+font-size:15px;
+
+}
+
+/* =====================================================
+--> RESPONSIVO - MOBILE E TABLETS (até 900px) <--
+Todas as regras abaixo substituem as configurações
+gerais quando a largura da tela for igual ou menor
+que 900px.
+===================================================== */
+
+@media (max-width:900px){
+
+/* ================= HEADER ================= */  
+
+.header{  
+
+    display:flex;  
+    flex-direction:row;  
+    justify-content:space-between;  
+    align-items:flex-start;  
+
+    padding:16px;  
+
+    gap:12px;  
+
+}  
+
+.header-direita{  
+
+    flex:0;  
+    width:auto;  
+
+    align-items:flex-end;  
+
+}  
+
+/* ================= LOGO ================= */  
+
+.logo{  
+
+    display:flex;  
+
+    justify-content:flex-start;  
+
+    flex:1;  
+
+    min-width:0;  
+
+}  
+
+.logo img{  
+
+    width:100%;  
+    max-width:180px;  
+    height:auto;  
+
+}  
+
+/* ================= MENU ================= */  
+
+nav{  
+
+    width:auto;  
+
+    align-items:flex-end;  
+
+}  
+
+nav a{  
+
+    font-size:14px;  
+
+    padding:10px 16px;  
+
+}  
+
+/* ================= HERO ================= */  
+
+.hero{  
+
+    justify-content:center;  
+
+}  
+
+.hero-content{  
+
+    width:92%;  
+
+    margin:0;  
+
+    padding-top:40px;  
+
+    align-items:center;  
+
+    text-align:center;  
+
+}  
+
+.slogan{  
+
+    font-size:29px;  
+
+}  
+
+.hero-botoes{  
+
+    justify-content:center;  
+
+    flex-direction:column;  
+
+    width:100%;  
+
+}  
+
+.btn{  
+
+    width:100%;  
+    max-width:340px;  
+
+}  
+
+/* ================= SEÇÕES ================= */  
+
+.secao h2{  
+
+    font-size:35px;  
+
+}  
+
+.subtitulo{  
+
+    font-size:18px;  
+
+}
+
+}
+
+/* =====================================================
+--> RESPONSIVO - CELULARES PEQUENOS (até 600px) <--
+Ajustes específicos para smartphones menores.
+===================================================== */
+
+@media (max-width:600px){
+
+/* ================= HEADER ================= */  
+
+.header{  
+
+    padding:16px;  
+
+}  
+
+/* ================= LOGO ================= */  
+
+.logo img{  
+
+    width:100%;  
+    max-width:180px;  
+    height:auto;  
+
+}  
+
+/* ================= HERO ================= */  
+
+.hero-content{  
+
+    padding-top:170px;  
+
+}  
+
+.slogan{  
+
+    font-size:24px;  
+
+}  
+
+.frase{  
+
+    font-size:18px;  
+
+}  
+
+/* ================= CARDS ================= */  
+
+.categoria-card{  
+
+    padding:30px 24px;  
+
+}  
+
+.produto-img{  
+
+    height:190px;  
+
+}  
+
+.passo{  
+
+    padding:34px 24px;  
+
+}  
+
+/* ================= MASCOTE ================= */  
+
+.mascote{  
+
+    padding:50px 24px;  
+
+}  
+
+.mascote img{  
+
+    width:150px;  
+
+}  
+
+/* ================= FOOTER ================= */  
+
+.footer-logo-img{  
+
+    width:120px;  
+
+}  
+
+.footer-links{  
+
+    gap:10px;  
+
+}
+
+}
+
+/* =====================================================
+--> FERRAMENTA DE DEPURAÇÃO (DEBUG) <--
+Utilize somente durante os testes.
+Comente ou remova antes da publicação.
+===================================================== */
+
+/*
+*{
+outline:1px solid red;
+}
+*/
