@@ -133,7 +133,7 @@ section{
 .logo img{
 
     width:100%;
-    max-width:320px;
+    max-width:220px;
     height:auto;
 
     object-fit:contain;
