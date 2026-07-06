@@ -297,6 +297,8 @@ nav a:hover::after{
 
     flex-direction:column;
 
+   justify-content:flex-start;
+
     align-items:flex-start;
 
     text-align:left;
