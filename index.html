@@ -421,50 +421,24 @@ Mais vendidos
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
-    const frases = document.querySelectorAll(".frase");
+    const letreiros = document.querySelectorAll(".texto-rotativo");
 
-    if (!frases.length) return;
+    if (!letreiros.length) return;
 
-    // Tempo de cada letra
     const velocidadeLetra = 70;
-
-    // Tempo entre cada bloco (azul -> verde -> azul)
     const pausaEntreBlocos = 350;
-
-    // Tempo da frase completa visível
     const pausaFinal = 1800;
-
-    // Tempo antes da próxima frase
     const pausaTroca = 400;
-
-    frases.forEach((frase, i) => {
-
-        frase.dataset.original = frase.innerHTML;
-        frase.innerHTML = "";
-        frase.classList.remove("ativa");
-
-        if(i === 0){
-            frase.classList.add("ativa");
-        }
-
-    });
-
-    let atual = 0;
 
     function esperar(ms){
         return new Promise(r => setTimeout(r, ms));
     }
 
     async function escreverSpan(span, texto){
-
         for(const letra of texto){
-
             span.textContent += letra;
-
             await esperar(velocidadeLetra);
-
         }
-
     }
 
     async function escreverFrase(frase){
@@ -479,7 +453,6 @@ document.addEventListener("DOMContentLoaded", () => {
         for(const original of spans){
 
             const novo = document.createElement("span");
-
             novo.className = original.className;
 
             frase.appendChild(novo);
@@ -489,52 +462,69 @@ document.addEventListener("DOMContentLoaded", () => {
             await esperar(pausaEntreBlocos);
 
             frase.appendChild(document.createTextNode(" "));
-
         }
-
     }
 
     async function apagarFrase(frase){
 
         frase.style.transition = "opacity .8s ease";
-
         frase.style.opacity = "0";
 
         await esperar(800);
 
         frase.innerHTML = "";
-
         frase.style.opacity = "1";
-
     }
 
-    async function loop(){
+    letreiros.forEach(letreiro => {
 
-        while(true){
+        const frases = letreiro.querySelectorAll(".frase");
 
-            const frase = frases[atual];
+        if(!frases.length) return;
 
-            frase.classList.add("ativa");
+        frases.forEach((frase, i) => {
 
-            await escreverFrase(frase);
-
-            await esperar(pausaFinal);
-
-            await apagarFrase(frase);
-
+            frase.dataset.original = frase.innerHTML;
+            frase.innerHTML = "";
             frase.classList.remove("ativa");
 
-            atual = (atual + 1) % frases.length;
+            if(i === 0){
+                frase.classList.add("ativa");
+            }
 
-            frases[atual].classList.add("ativa");
+        });
 
-            await esperar(pausaTroca);
+        let atual = 0;
+
+        async function loop(){
+
+            while(true){
+
+                const frase = frases[atual];
+
+                frase.classList.add("ativa");
+
+                await escreverFrase(frase);
+
+                await esperar(pausaFinal);
+
+                await apagarFrase(frase);
+
+                frase.classList.remove("ativa");
+
+                atual = (atual + 1) % frases.length;
+
+                frases[atual].classList.add("ativa");
+
+                await esperar(pausaTroca);
+
+            }
 
         }
 
-    }
+        loop();
 
-    loop();
+    });
 
 });
 </script>
