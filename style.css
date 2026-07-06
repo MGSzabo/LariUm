@@ -12,6 +12,7 @@ jo/* =====================================================
 
 html{
     scroll-behavior:smooth;
+    overflow-x:hidden;
 }
 
 body{
@@ -229,9 +230,7 @@ nav a:hover::after{
 
 .hero{
 
-   display:none;
-   
-    position:relative;
+   position:relative;
 
     min-height:65vh;
 
