@@ -301,7 +301,7 @@ justify-content:flex-start;
 
 align-items:flex-start;  
 
-text-align:left;
+text-align:center;
 
 }
 
@@ -313,9 +313,9 @@ line-height:1.35;
 
 font-weight:800;  
 
-color:#263746;  
+color:#ffffff;  
 
-margin-bottom:28px;  
+margin-bottom:40px;  
 
 max-width:620px;
 
