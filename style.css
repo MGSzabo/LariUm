@@ -109,7 +109,11 @@ section{
 /* ================= COLUNA DIREITA ================= */
 
 .header-direita{
-
+   
+    position:relative;
+   
+    z-index:2;
+   
     display:flex;
 
     flex:1;
@@ -117,9 +121,8 @@ section{
     justify-content:flex-end;
 
     align-items:flex-start;
-
+   
 }
-
 
 /* ================= MENU AUXILIAR ================= */
 
@@ -150,29 +153,34 @@ section{
 
 .logo{
 
+    position:absolute;
+
+    top:0;
+    bottom:0;
+    left:50%;
+
+    transform:translateX(-50%);
+
     display:flex;
-
-    justify-content:flex-start;
-
+    justify-content:center;
     align-items:center;
 
-    flex:1;
+    width:320px;
 
-    min-width:0;
+    z-index:1;
+
+    pointer-events:none;
 
 }
 
 .logo img{
 
     width:100%;
-
-    max-width:220px;
-
-    height:auto;
+    height:100%;
 
     object-fit:contain;
 
-    transition:.35s;
+    pointer-events:none;
 
 }
 
@@ -186,6 +194,10 @@ section{
 /* ================= MENU PRINCIPAL ================= */
 
 nav{
+   
+    position:relative;
+   
+    z-index:2;
 
     display:flex;
 
