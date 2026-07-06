@@ -229,6 +229,8 @@ nav a:hover::after{
 
 .hero{
 
+   display:none;
+   
     position:relative;
 
     min-height:65vh;
@@ -239,7 +241,7 @@ nav a:hover::after{
 
     align-items:flex-start;
 
-    overflow:clip;
+    overflow:hidden;
 
 }
 
@@ -290,7 +292,7 @@ nav a:hover::after{
 
     width:min(760px,92%);
 
-    margin-left:0 auto;
+    margin-left:7%;
 
     padding-top:20px;
 
