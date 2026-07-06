@@ -1037,17 +1037,19 @@ footer{
    
 
     .logo{
-
     justify-content:flex-start;
-
+       
     flex:1;
+       
+    min-width:0;
+}
 
 }
     .logo img{
 
         width:100%;
 
-        max-width:420px;
+        max-width:100%;
 
         height:auto;
 
