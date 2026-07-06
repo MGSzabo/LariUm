@@ -367,6 +367,48 @@ nav a:hover::after{
 }
 
 /* =====================================================
+   TEXTO ROTATIVO
+===================================================== */
+
+.texto-rotativo{
+    position:relative;
+    width:100%;
+    min-height:90px;
+    margin-bottom:42px;
+}
+
+.frase{
+    position:absolute;
+    width:100%;
+    left:0;
+    top:0;
+
+    opacity:0;
+    transform:translateY(18px);
+
+    transition:opacity .8s ease, transform .8s ease;
+
+    font-size:35px;
+    font-weight:700;
+    line-height:1.7;
+
+    pointer-events:none;
+}
+
+.frase.ativa{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.azul{
+    color:var(--azul);
+}
+
+.verde{
+    color:var(--verde);
+}
+
+/* =====================================================
    --> SEÇÕES GERAIS (Desktop + Mobile) <--
 ===================================================== */
 
