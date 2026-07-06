@@ -133,7 +133,7 @@ section{
 .logo img{
 
     width:100%;
-    max-width:420px;
+    max-width:320px;
     height:auto;
 
     object-fit:contain;
@@ -366,7 +366,7 @@ nav a:hover::after{
 
         transform .8s ease;
 
-    font-size:28px;
+    font-size:35px;
 
     font-weight:700;
 
