@@ -321,6 +321,47 @@ max-width:620px;
 
 }
 
+/* ================= BRILHO SUAVE NOS TÍTULOS ================= */
+
+.slogan,
+.secao h2{
+
+color:#fff;
+
+background:linear-gradient(
+90deg,
+#ffffff 0%,
+#ffffff 42%,
+rgba(23,136,214,.35) 48%,
+rgba(45,187,99,.45) 50%,
+rgba(23,136,214,.35) 52%,
+#ffffff 58%,
+#ffffff 100%
+);
+
+background-size:250% 100%;
+
+background-clip:text;
+-webkit-background-clip:text;
+
+color:transparent;
+-webkit-text-fill-color:transparent;
+
+animation:holofote 6s ease-in-out infinite;
+
+}
+
+@keyframes holofote{
+
+0%{
+background-position:200% 0;
+}
+
+100%{
+background-position:-100% 0;
+}
+
+}
 /* =====================================================
 TEXTO ROTATIVO
 ===================================================== */
