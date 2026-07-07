@@ -325,9 +325,9 @@ max-width:620px;
 
 .slogan,
 .secao h2{
-
-color:#fff;
-
+color:#4b5563;
+text-shadow:0 0 2px rgba(255,255,255,.45);
+ 
 background:linear-gradient(
 90deg,
 #ffffff 0%,
@@ -347,8 +347,7 @@ background-clip:text;
 color:transparent;
 -webkit-text-fill-color:transparent;
 
-animation:holofote 6s ease-in-out infinite;
-
+animation: brilho 6s ease-in-out infinite alternate;
 }
 
 @keyframes holofote{
