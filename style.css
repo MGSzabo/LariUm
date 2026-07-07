@@ -343,7 +343,7 @@ background-size:250% 100%;
 
 background-clip:text;
 -webkit-background-clip:text;
-
+-webkit-text-fill-color: transparent;
 animation: holofote 6s ease-in-out infinite alternate;
 }
 
@@ -367,6 +367,7 @@ position:relative;
 width:100%;
 min-height:90px;
 margin-bottom:42px;
+
 }
 
 .frase{
@@ -375,19 +376,24 @@ width:100%;
 left:0;
 top:0;
 
-opacity:0;  
-transform:translateY(18px);  
+opacity:0;
+transform:translateY(18px);
 
-transition:opacity .8s ease, transform .8s ease;  
+transition:opacity .8s ease, transform .8s ease;
 
-font-size:45px;  
-font-weight:700;  
+font-size:45px;
+font-weight:700;
 line-height:1.7;
- white-space: normal;
-word-wrap: break-word;
+
+white-space:normal;
+word-break:keep-all;
+overflow-wrap:break-word;
+
+text-align:center;
+padding:0 12px;
+box-sizing:border-box;
 
 pointer-events:none;
-
 }
 
 .frase.ativa{
