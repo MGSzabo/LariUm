@@ -344,10 +344,7 @@ background-size:250% 100%;
 background-clip:text;
 -webkit-background-clip:text;
 
-color:transparent;
--webkit-text-fill-color:transparent;
-
-animation: brilho 6s ease-in-out infinite alternate;
+animation: holofote 6s ease-in-out infinite alternate;
 }
 
 @keyframes holofote{
