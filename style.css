@@ -291,7 +291,7 @@ width:min(760px,92%);
 
 margin-left:7%;  
 
-padding-top:20px;  
+padding-top:210px;  
 
 display:flex;  
 
@@ -354,6 +354,11 @@ pointer-events:none;
 .frase.ativa{
 opacity:1;
 transform:translateY(0);
+}
+
+.frase span{
+display:inline;
+white-space:nowrap;
 }
 
 .azul{
