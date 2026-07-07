@@ -382,7 +382,9 @@ transition:opacity .8s ease, transform .8s ease;
 
 font-size:45px;  
 font-weight:700;  
-line-height:1.7;  
+line-height:1.7;
+ white-space: normal;
+word-wrap: break-word;
 
 pointer-events:none;
 
