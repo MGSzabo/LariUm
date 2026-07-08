@@ -88,7 +88,7 @@ align-items:center;
 
 min-height:140px;  
 
-background: rgba(255,255,255,.82);
+background:rgba(45,187,99,.18);
 
 backdrop-filter:blur(14px);  
 
@@ -307,10 +307,7 @@ text-align:center;
 
 /* ================= BRILHO SUAVE NOS TÍTULOS ================= */
 
-.slogan,
 .secao h2{
-
-color:#ffffff;
 
 text-shadow:
 0 1px 2px rgba(255,255,255,.35),
@@ -430,7 +427,7 @@ font-weight:900;
 
 line-height:1.15;
 
-color:#22384a;
+color:#ffffff;
 
 margin-bottom:30px;
 
