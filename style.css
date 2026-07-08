@@ -367,8 +367,9 @@ font-weight:700;
 line-height:1.7;
 
 white-space:normal;
-word-break:keep-all;
+word-break:break-word;
 overflow-wrap:break-word;
+ max-width:100%;
 
 text-align:center;
 padding:0 12px;
