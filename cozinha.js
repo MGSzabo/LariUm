@@ -1,26 +1,14 @@
-const cozinha = {
+const produtos = {
 
-airfryers: [
+"Air Fryers":[
 
-{
-nome: "Mondial AFN-40-BI 4L 127V",
-link: "https://..."
-},
+"Philips Walita Série 1000 XL 6,2L|https://.......",
 
-{
-nome: "Mondial AFN-40-BI 4L 220V",
-link: "https://..."
-},
+"Midea Widemax 5,5L|https://.......",
 
-{
-nome: "Midea Widemax 5,5L",
-link: "https://..."
-},
+"Mondial AFN-40-BI 4L 127V|https://.......",
 
-{
-nome: "Philips Walita Série 1000 XL 6,2L",
-link: "https://..."
-}
+"Mondial AFN-40-BI 4L 220V|https://......."
 
 ]
 
