@@ -61,6 +61,66 @@
 
 <script src="cozinha.js"></script>
 
+    <div id="lista-produtos"></div>
+
+<script src="cozinha.js"></script>
+
+<script>
+
+const area = document.getElementById("lista-produtos");
+
+const botoes = document.querySelectorAll(".categoria-btn");
+
+botoes.forEach(botao=>{
+
+    botao.addEventListener("click",()=>{
+
+        botoes.forEach(b=>b.classList.remove("ativo"));
+
+        botao.classList.add("ativo");
+
+        const categoria = botao.dataset.categoria;
+
+        mostrarCategoria(categoria);
+
+    });
+
+});
+
+function mostrarCategoria(nome){
+
+    area.innerHTML="";
+
+    const lista = produtos[nome];
+
+    lista.forEach(item=>{
+
+        const partes=item.split("|");
+
+        const titulo=partes[0];
+
+        const link=partes[1];
+
+        const a=document.createElement("a");
+
+        a.href=link;
+
+        a.target="_blank";
+
+        a.className="produto-btn";
+
+        a.textContent=titulo;
+
+        area.appendChild(a);
+
+    });
+
+}
+
+mostrarCategoria("Air Fryers");
+
+</script>
+
 </body>
 
 </html>
