@@ -1176,7 +1176,7 @@ nav a{
 
 .slogan{  
 
-    font-size:55px;  
+    font-size:35px;  
 
 }  
 
@@ -1248,7 +1248,7 @@ Ajustes específicos para smartphones menores.
 
 .slogan{  
 
-    font-size:24px;  
+    font-size:35px;  
 
 }  
 
@@ -1313,8 +1313,8 @@ Ajustes específicos para smartphones menores.
     }
 
 .produto-img img{
-        width:80%;
-        height:80%;
+        width:70%;
+        height:70%;
         object-fit:contain;
     }
 
