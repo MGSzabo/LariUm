@@ -1655,6 +1655,108 @@ padding:16px;
 }
 
 /* =====================================================
+BOTÕES DAS CATEGORIAS
+===================================================== */
+
+.hero-tags{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:14px;
+
+margin-top:25px;
+
+}
+
+.categoria-btn{
+
+padding:14px 26px;
+
+border:none;
+
+border-radius:999px;
+
+background:linear-gradient(135deg,var(--azul),var(--verde));
+
+color:#fff;
+
+font-size:16px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.30s;
+
+}
+
+.categoria-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 10px 20px rgba(0,0,0,.15);
+
+}
+
+.categoria-btn.ativo{
+
+background:#0b7d69;
+
+}
+
+/* =====================================================
+LISTA DOS PRODUTOS
+===================================================== */
+
+#lista-produtos{
+
+display:flex;
+
+flex-direction:column;
+
+gap:16px;
+
+margin-top:30px;
+
+}
+
+.produto-btn{
+
+display:block;
+
+padding:18px 24px;
+
+background:#fff;
+
+border-radius:16px;
+
+border:1px solid #dfe9f2;
+
+color:var(--texto);
+
+font-weight:700;
+
+box-shadow:var(--sombra1);
+
+transition:.30s;
+
+}
+
+.produto-btn:hover{
+
+background:linear-gradient(135deg,var(--azul),var(--verde));
+
+color:#fff;
+
+transform:translateX(8px);
+
+}
+
+/* =====================================================
 --> FERRAMENTA DE DEPURAÇÃO (DEBUG) <--
 Utilize somente durante os testes.
 Comente ou remova antes da publicação.
