@@ -1312,7 +1312,12 @@ Ajustes específicos para smartphones menores.
         height:160px;
     }
 
-}
+.produto-img img{
+        width:80%;
+        height:80%;
+        object-fit:contain;
+    }
+
 }
 
 /* =====================================================
