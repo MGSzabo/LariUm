@@ -16,52 +16,63 @@
 
 <header class="header">
 
-    <div class="logo">
-        <a href="index.html">
-            <img src="images/logo.png" alt="LariUm">
-        </a>
-    </div>
+<div class="logo">
+<a href="index.html">
+<img src="images/logo.png" alt="LariUm">
+</a>
+</div>
 
 </header>
 
 <section class="secao">
 
-    <h1>Cozinha</h1>
+<h1>Cozinha</h1>
 
-    <p>
-        Escolha uma categoria abaixo.
-    </p>
+<p>
+Escolha uma categoria abaixo.
+</p>
 
-    <div class="hero-tags">
+<div class="hero-tags">
 
-        <button data-categoria="airfryers">
-            Air Fryers
-        </button>
+<button class="categoria-btn"
+data-categoria="Air Fryers">
 
-        <!-- Depois adicionaremos -->
-        <!-- Panelas -->
-        <!-- Frigideiras -->
-        <!-- Cafeteiras -->
-        <!-- Liquidificadores -->
-        <!-- Etc -->
+Air Fryers
 
-    </div>
+</button>
+
+<!-- Futuramente -->
+
+<!--
+<button class="categoria-btn"
+data-categoria="Panelas">
+Panelas
+</button>
+
+<button class="categoria-btn"
+data-categoria="Frigideiras">
+Frigideiras
+</button>
+
+<button class="categoria-btn"
+data-categoria="Cafeteiras">
+Cafeteiras
+</button>
+-->
+
+</div>
 
 </section>
 
 <section class="secao">
 
-    <div id="resultado-produtos">
+<div id="lista-produtos">
 
-        <!-- O JavaScript vai criar os botões aqui -->
+<!-- Os botões serão criados aqui -->
 
-    </div>
+</div>
 
 </section>
-
-<script src="cozinha.js"></script>
-
-    <div id="lista-produtos"></div>
 
 <script src="cozinha.js"></script>
 
@@ -73,47 +84,47 @@ const botoes = document.querySelectorAll(".categoria-btn");
 
 botoes.forEach(botao=>{
 
-    botao.addEventListener("click",()=>{
+botao.addEventListener("click",()=>{
 
-        botoes.forEach(b=>b.classList.remove("ativo"));
+botoes.forEach(b=>b.classList.remove("ativo"));
 
-        botao.classList.add("ativo");
+botao.classList.add("ativo");
 
-        const categoria = botao.dataset.categoria;
+mostrarCategoria(botao.dataset.categoria);
 
-        mostrarCategoria(categoria);
-
-    });
+});
 
 });
 
 function mostrarCategoria(nome){
 
-    area.innerHTML="";
+area.innerHTML="";
 
-    const lista = produtos[nome];
+const lista=produtos[nome];
 
-    lista.forEach(item=>{
+if(!lista)return;
 
-        const partes=item.split("|");
+lista.forEach(item=>{
 
-        const titulo=partes[0];
+const partes=item.split("|");
 
-        const link=partes[1];
+const titulo=partes[0];
 
-        const a=document.createElement("a");
+const link=partes[1];
 
-        a.href=link;
+const a=document.createElement("a");
 
-        a.target="_blank";
+a.href=link;
 
-        a.className="produto-btn";
+a.target="_blank";
 
-        a.textContent=titulo;
+a.className="produto-btn";
 
-        area.appendChild(a);
+a.textContent=titulo;
 
-    });
+area.appendChild(a);
+
+});
 
 }
 
