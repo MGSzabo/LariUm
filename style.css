@@ -940,39 +940,54 @@ box-shadow:
 }
 /* ================= SELOS DOS PRODUTOS ================= */
 
+.produto-img{
+    position:relative;
+}
+
 .produto-selo{
 
-position:absolute;
+    position:absolute;
 
-top:14px;
-left:14px;
+    top:16px;
+    left:16px;
 
-z-index:5;
+    display:flex;
+    align-items:center;
+    gap:8px;
 
-display:inline-flex;
-align-items:center;
+    padding:8px 16px;
 
-padding:7px 12px;
+    border-radius:999px;
 
-border-radius:999px;
+    background:#fff;
 
-font-size:12px;
-font-weight:700;
+    border:2px solid #2dbb63;
 
-color:#fff;
+    color:#243443;
 
-box-shadow:
-0 6px 18px rgba(0,0,0,.12);
+    font-size:15px;
+    font-weight:700;
+
+    box-shadow:0 10px 24px rgba(0,0,0,.10);
+
+    z-index:10;
 
 }
 
-.selo-vendido{
+.selo-icone{
 
-background:linear-gradient(
-135deg,
-var(--verde),
-#1fa857
-);
+    width:18px;
+    height:18px;
+
+    fill:none;
+
+    stroke:url(#gradiente);
+
+    stroke:#1788d6;
+
+    stroke-width:2;
+
+    stroke-linejoin:round;
 
 }
 
