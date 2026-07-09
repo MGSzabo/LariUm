@@ -144,9 +144,9 @@ display:block;
 pointer-events:none;
 }
 .logo img{
-height:100%;
+height:90px;
 width:auto;
-max-height:100%;
+max-height:90px;
 
 object-fit:contain;
 
@@ -774,7 +774,7 @@ background:linear-gradient(
 
 width:100%;
 height:100%;
-object-fit:cover;
+object-fit:contain;
 display:block;
 
 }
@@ -1305,7 +1305,14 @@ Ajustes específicos para smartphones menores.
     gap:10px;  
 
 }
+ 
+@media (max-width:768px){
 
+    .produto-img{
+        height:160px;
+    }
+
+}
 }
 
 /* =====================================================
