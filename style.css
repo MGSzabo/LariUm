@@ -806,7 +806,7 @@ transition:.35s;
 
 }
 
-.produto:hover img{
+.produto:hover-img img{
 
 transform:scale(1.05);
 
@@ -938,36 +938,6 @@ stroke-linejoin:round;
     stroke-width:2;
 
     stroke-linejoin:round;
-
-}
-
-.selo-beneficio{
-
-background:linear-gradient(
-135deg,
-var(--azul),
-var(--verde)
-);
-
-}
-
-.selo-oferta{
-
-background:linear-gradient(
-135deg,
-#ff9800,
-#ff6f00
-);
-
-}
-
-.selo-avaliado{
-
-background:linear-gradient(
-135deg,
-#ff4d6d,
-#ff758f
-);
 
 }
 
