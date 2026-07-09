@@ -1138,7 +1138,7 @@ margin-bottom:28px;
 
 .footer-logo-img{
 
-width:150px;  
+width:220px;  
 
 object-fit:contain;
 
@@ -1241,7 +1241,7 @@ que 900px.
 .logo img{  
 
     width:100%;  
-    max-width:340px;  
+    max-width:280px;  
     height:auto;  
 
 }  
@@ -1288,7 +1288,7 @@ nav a{
 
 .slogan{  
 
-    font-size:35px;  
+    font-size:25px;  
 
 }  
 
@@ -1342,10 +1342,22 @@ Ajustes específicos para smartphones menores.
 
 /* ================= LOGO ================= */  
 
-.logo img{  
+ .logo{  
+
+    display:flex;  
+
+    justify-content:flex-start;  
+
+    flex:1;  
+
+    min-width:0;  
+
+}  
+
+ .logo img{  
 
     width:100%;  
-    max-width:180px;  
+    max-width:280px;  
     height:auto;  
 
 }  
@@ -1360,7 +1372,7 @@ Ajustes específicos para smartphones menores.
 
 .slogan{  
 
-    font-size:35px;  
+    font-size:25px;  
 
 }  
 
@@ -1408,13 +1420,13 @@ Ajustes específicos para smartphones menores.
 
 .footer-logo-img{  
 
-    width:120px;  
+    width:220px;  
 
 }  
 
 .footer-links{  
 
-    gap:10px;  
+    gap:18px;  
 
 }
 
@@ -1427,8 +1439,8 @@ Ajustes específicos para smartphones menores.
     }
 
 .produto-img img{
-        width:70%;
-        height:70%;
+        width:75%;
+        height:75%;
         object-fit:contain;
     }
 
