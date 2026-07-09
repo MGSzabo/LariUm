@@ -806,10 +806,8 @@ transition:.35s;
 
 }
 
-.produto:hover-img img{
-
-transform:scale(1.05);
-
+.produto:hover .produto-img img{
+    transform:scale(1.05);
 }
 
 .produto h3{
@@ -1417,6 +1415,8 @@ Ajustes específicos para smartphones menores.
 .footer-links{  
 
     gap:10px;  
+
+}
 
 }
  
