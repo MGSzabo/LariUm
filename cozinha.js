@@ -42,7 +42,7 @@ const produtos = {
 
 "Frigideira Rochedo Stone Pro Antiaderente 24cm|https://s.shopee.com.br/3ViXIOcuFs",
 
-"Frigideira Tramontina Turim Antiaderente Jogo 2 Peças|https://s.shopee.com.br/6ffZ3nSciM",
+"Frigideira Tramontina Turim Antiaderente Jogo 2 Peças|https://s.shopee.com.br/4fuYb5ZufQ",
 
 "Frigideira Tramontina Turim Starflon Max 16, 20 e 24cm|https://s.shopee.com.br/20tjVZodGI"
 
